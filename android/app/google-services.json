@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "170023933522",
+    "firebase_url": "https://acai-da-juh.firebaseio.com",
+    "project_id": "acai-da-juh",
+    "storage_bucket": "acai-da-juh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170023933522:android:f996d32ff2dd712440f18b",
+        "android_client_info": {
+          "package_name": "com.brenoitalo.acaidajuh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170023933522-kaahluc5cmi93hi824lrdks99877vc61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2P1-MSHyw-P04wJIxDA0Sgv6UEy22bcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170023933522-kaahluc5cmi93hi824lrdks99877vc61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
