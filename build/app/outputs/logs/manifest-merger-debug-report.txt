@@ -7,8 +7,11 @@ INJECTED from C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\android\app\src\ma
 MERGED from C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from [:firebase_auth] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:cloud_firestore] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\cloud_firestore_web\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_storage] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_core_web\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_auth_web\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\de2048d582fe7ed2344b667841ac1eb6\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\e4577aac3afa7ec004a3464e20f578bd\firebase-auth-19.2.0\AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\e182f29d82fd9aa86504dae7dda1fd54\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:2:1-26:12
@@ -141,10 +144,16 @@ MERGED from [:firebase_auth] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\bui
 MERGED from [:firebase_auth] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\cloud_firestore_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\cloud_firestore_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_storage] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_storage] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_core_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_core_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_auth_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth_web] C:\Users\srbre\Documents\Flutter_Apps\acaidajuh\build\firebase_auth_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\de2048d582fe7ed2344b667841ac1eb6\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\de2048d582fe7ed2344b667841ac1eb6\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\e4577aac3afa7ec004a3464e20f578bd\firebase-auth-19.2.0\AndroidManifest.xml:21:5-44
