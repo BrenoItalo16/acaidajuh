@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class DrawerTile extends StatelessWidget {
-
   const DrawerTile({this.iconData, this.title, this.page});
 
   final IconData iconData;
@@ -16,9 +15,9 @@ class DrawerTile extends StatelessWidget {
     final Color primaryColor = Theme.of(context).primaryColor;
 
     return InkWell(
-      onTap: (){
+      onTap: () {
         context.read<PageManager>().setPage(page);
-
+        //TODO Talvez o problema esteja aqui
       },
       child: SizedBox(
         height: 60,
@@ -26,7 +25,7 @@ class DrawerTile extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
-              child:Icon(
+              child: Icon(
                 iconData,
                 size: 32,
                 color: curPage == page ? primaryColor : Colors.grey[700],
@@ -35,13 +34,12 @@ class DrawerTile extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                fontSize: 16,
-                color: curPage == page ? primaryColor : Colors.grey[700]
-              ),
+                  fontSize: 16,
+                  color: curPage == page ? primaryColor : Colors.grey[700]),
             )
           ],
-          ),
         ),
+      ),
     );
   }
 }
