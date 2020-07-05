@@ -1,4 +1,5 @@
 import 'package:acaidajuh/models/product.dart';
+import 'item_size.dart';
 
 class CartProduct {
   CartProduct.fromProduct(this.product) {
@@ -12,4 +13,14 @@ class CartProduct {
   String size;
 
   Product product;
+
+  ItemSize get itemSize {
+    if (product == null) return null;
+    return product.findSize(size);
+  }
+
+  num get unitPrice {
+    if (product == null) return 0;
+    return itemSize?.price ?? 0;
+  }
 }
