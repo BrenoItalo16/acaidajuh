@@ -1,4 +1,5 @@
 import 'package:acaidajuh/models/product.dart';
+import 'package:acaidajuh/models/user_manager.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -40,7 +41,7 @@ class ProductScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment:
-                    CrossAxisAlignment.start, //*Joga o texta para a esquerda
+                    CrossAxisAlignment.stretch, //Estica o botão para os lados
                 children: <Widget>[
                   Text(
                     product.name,
@@ -101,6 +102,36 @@ class ProductScreen extends StatelessWidget {
                       return SizeWidget(size: s);
                     }).toList(),
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  if (product.hasStock)
+                    Consumer2<UserManager, Product>(
+                      builder: (_, userManager, product, __) {
+                        return SizedBox(
+                          height: 44,
+                          child: RaisedButton(
+                            onPressed: product.selectedSize != null
+                                ? () {
+                                    if (userManager.isLoggedIn) {
+                                      //todo: Adicionar ao carrinho
+                                    } else {
+                                      Navigator.of(context).pushNamed('/login');
+                                    }
+                                  }
+                                : null,
+                            color: primaryColor,
+                            textColor: Colors.white,
+                            child: Text(
+                              userManager.isLoggedIn
+                                  ? 'Adicionar ao carrinho'
+                                  : 'Entre para comprar',
+                              style: const TextStyle(fontSize: 18),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                 ],
               ),
             )
