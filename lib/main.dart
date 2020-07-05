@@ -25,6 +25,10 @@ class MyApp extends StatelessWidget {
           create: (_) => ProductManager(),
           lazy: false,
         ),
+        Provider(
+          create: (_) => UserManager(),
+          lazy: false,
+        ),
       ],
       child: MaterialApp(
         title: 'Açaí da Juh',

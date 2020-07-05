@@ -1,3 +1,4 @@
+import 'package:acaidajuh/models/cart_manager.dart';
 import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/user_manager.dart';
 import 'package:carousel_pro/carousel_pro.dart';
@@ -114,7 +115,9 @@ class ProductScreen extends StatelessWidget {
                             onPressed: product.selectedSize != null
                                 ? () {
                                     if (userManager.isLoggedIn) {
-                                      //todo: Adicionar ao carrinho
+                                      context
+                                          .read<CartManager>()
+                                          .addToCart(product);
                                     } else {
                                       Navigator.of(context).pushNamed('/login');
                                     }
