@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\srbre\\Documents\\Flutter_Apps\\acaidajuh\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\11139722c985ff28aa4e11b218f92cf9\\play-services-base-17.1.0\\res\\values\\values.xml",
@@ -23,20 +23,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\srbre\\Documents\\Flutter_Apps\\acaidajuh\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\514ea350bf33455db88a7c60a0cc631e\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,305,387,491,600,720,815",
-                        "endColumns": "143,105,81,103,108,119,94,71",
-                        "endOffsets": "194,300,382,486,595,715,810,882"
+                        "startLines": "4,7",
+                        "startColumns": "0,0",
+                        "startOffsets": "238,401",
+                        "endColumns": "63,166",
+                        "endOffsets": "301,567"
                     },
                     "to": {
-                        "startLines": "104,105,106,107,108,109,110,111",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "7730,7874,7980,8062,8166,8275,8395,8490",
-                        "endColumns": "143,105,81,103,108,119,94,71",
-                        "endOffsets": "7869,7975,8057,8161,8270,8390,8485,8557"
+                        "startLines": "84,94",
+                        "startColumns": "4,4",
+                        "startOffsets": "5259,6437",
+                        "endColumns": "67,166",
+                        "endOffsets": "5322,6599"
                     }
                 },
                 {
@@ -59,7 +59,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\srbre\\Documents\\Flutter_Apps\\acaidajuh\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\src\\apps\\acaidajuh\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,305,387,491,600,720,815",
+                        "endColumns": "143,105,81,103,108,119,94,71",
+                        "endOffsets": "194,300,382,486,595,715,810,882"
+                    },
+                    "to": {
+                        "startLines": "104,105,106,107,108,109,110,111",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "7730,7874,7980,8062,8166,8275,8395,8490",
+                        "endColumns": "143,105,81,103,108,119,94,71",
+                        "endOffsets": "7869,7975,8057,8161,8270,8390,8485,8557"
+                    }
+                },
+                {
+                    "source": "C:\\src\\apps\\acaidajuh\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -75,23 +92,6 @@
                         "endLines": "117,120",
                         "endColumns": "12,12",
                         "endOffsets": "8925,9090"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\7297f8077bbe9d5fce32d9be1a714f50\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "4,7",
-                        "startColumns": "0,0",
-                        "startOffsets": "238,401",
-                        "endColumns": "63,166",
-                        "endOffsets": "301,567"
-                    },
-                    "to": {
-                        "startLines": "84,94",
-                        "startColumns": "4,4",
-                        "startOffsets": "5259,6437",
-                        "endColumns": "67,166",
-                        "endOffsets": "5322,6599"
                     }
                 }
             ]

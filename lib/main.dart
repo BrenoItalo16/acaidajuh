@@ -1,6 +1,8 @@
+import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/product_manager.dart';
 import 'package:acaidajuh/models/user_manager.dart';
 import 'package:acaidajuh/screens/login/login_screen.dart';
+import 'package:acaidajuh/screens/product/product_screen.dart';
 import 'package:acaidajuh/screens/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:acaidajuh/screens/base/base_screen.dart';
@@ -38,9 +40,19 @@ class MyApp extends StatelessWidget {
         onGenerateRoute: (settings) {
           switch (settings.name) {
             case '/login':
-              return MaterialPageRoute(builder: (_) => LoginScreen());
+              return MaterialPageRoute(
+                builder: (_) => LoginScreen(),
+              );
             case '/signup':
-              return MaterialPageRoute(builder: (_) => SignUpScreen());
+              return MaterialPageRoute(
+                builder: (_) => SignUpScreen(),
+              );
+            case '/product':
+              return MaterialPageRoute(
+                builder: (_) => ProductScreen(
+                  settings.arguments as Product,
+                ),
+              );
             default:
               return MaterialPageRoute(builder: (_) => BaseScreen());
           }

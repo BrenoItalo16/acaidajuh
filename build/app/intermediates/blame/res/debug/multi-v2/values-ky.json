@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\srbre\\Documents\\Flutter_Apps\\acaidajuh\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
+            "outputFile": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\7297f8077bbe9d5fce32d9be1a714f50\\jetified-play-services-basement-17.0.0\\res\\values-ky\\values.xml",
+                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\514ea350bf33455db88a7c60a0cc631e\\jetified-play-services-basement-17.0.0\\res\\values-ky\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

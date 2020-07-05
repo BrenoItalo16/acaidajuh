@@ -1,10 +1,10 @@
-#Sun Jun 28 22:05:39 BRT 2020
+#Sun Jul 05 11:04:30 BRT 2020
 path.2=classes3.dex
 path.1=classes2.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=C\:\\Users\\srbre\\Documents\\Flutter_Apps\\acaidajuh\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes3.dex
-base.1=C\:\\Users\\srbre\\Documents\\Flutter_Apps\\acaidajuh\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes2.dex
-base.0=C\:\\Users\\srbre\\Documents\\Flutter_Apps\\acaidajuh\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+base.2=C\:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes3.dex
+base.1=C\:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes2.dex
+base.0=C\:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
