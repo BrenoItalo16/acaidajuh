@@ -10,6 +10,8 @@ class CartManager extends ChangeNotifier {
 
   User user;
 
+  num productsPrice = 0.0;
+
   void updateUser(UserManager userManager) {
     user = userManager.user;
     items.clear();
@@ -37,6 +39,7 @@ class CartManager extends ChangeNotifier {
       user.cartReference
           .add(cartProduct.toCartItemMap())
           .then((doc) => cartProduct.id = doc.documentID);
+      _onItemUpdated();
     }
     notifyListeners();
   }
@@ -49,17 +52,33 @@ class CartManager extends ChangeNotifier {
   }
 
   void _onItemUpdated() {
-    for (final CartProduct in items) {
-      if (CartProduct.quantity == 0) {
-        removeOfCart(CartProduct);
+    productsPrice = 0.0;
+
+    for (int i = 0; i < items.length; i++) {
+      final cartProduct = items[i];
+      if (cartProduct.quantity == 0) {
+        removeOfCart(cartProduct);
+        i--;
+        continue;
       }
-      _updateCartProduct(CartProduct);
+      productsPrice += cartProduct.totalPrice;
+      _updateCartProduct(cartProduct);
     }
+    print(productsPrice);
   }
 
   void _updateCartProduct(CartProduct cartProduct) {
-    user.cartReference
-        .document(cartProduct.id)
-        .updateData(cartProduct.toCartItemMap());
+    if (cartProduct.id != null)
+      // ignore: curly_braces_in_flow_control_structures
+      user.cartReference
+          .document(cartProduct.id)
+          .updateData(cartProduct.toCartItemMap());
+  }
+
+  bool get isCartValid {
+    for (final cartProduct in items) {
+      if (!cartProduct.hasStock) return false;
+    }
+    return true;
   }
 }
