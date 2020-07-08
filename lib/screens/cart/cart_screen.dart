@@ -1,3 +1,4 @@
+import 'package:acaidajuh/common/custom_drawer/price_card.dart';
 import 'package:acaidajuh/models/cart_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,10 +14,19 @@ class CartScreen extends StatelessWidget {
       ),
       body: Consumer<CartManager>(
         builder: (_, cartManager, __) {
-          return Column(
-            children: cartManager.items
-                .map((cartProduct) => CartTile(cartProduct))
-                .toList(),
+          return ListView(
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: cartManager.items
+                    .map((cartProduct) => CartTile(cartProduct))
+                    .toList(),
+              ),
+              PriceCard(
+                buttonText: 'Continuar para entrega',
+                onPressed: cartManager.isCartValid ? () {} : null,
+              ),
+            ],
           );
         },
       ),
