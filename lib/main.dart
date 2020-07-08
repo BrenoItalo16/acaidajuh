@@ -9,7 +9,6 @@ import 'package:acaidajuh/screens/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:acaidajuh/screens/base/base_screen.dart';
 import 'package:provider/provider.dart';
-
 import 'models/cart_manager.dart';
 
 void main() {
