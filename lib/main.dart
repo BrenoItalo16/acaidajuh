@@ -1,3 +1,4 @@
+import 'package:acaidajuh/models/home_manager.dart';
 import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/product_manager.dart';
 import 'package:acaidajuh/models/user_manager.dart';
@@ -28,6 +29,10 @@ class MyApp extends StatelessWidget {
           create: (_) => ProductManager(),
           lazy: false,
         ),
+        Provider(
+          create: (_) => HomeManager(),
+          lazy: false,
+        ),
         ChangeNotifierProxyProvider<UserManager, CartManager>(
           create: (_) => CartManager(),
           lazy: false,
@@ -39,9 +44,10 @@ class MyApp extends StatelessWidget {
         title: 'Açaí da Juh',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: const Color.fromARGB(255, 170, 0, 255), //Cor principal
-          scaffoldBackgroundColor:
-              const Color.fromARGB(255, 170, 0, 255), //Cor de fundo
+          primaryColor: const Color.fromARGB(
+              255, 128, 0, 128), //Cor principal 255, 170, 0, 255
+          scaffoldBackgroundColor: const Color.fromARGB(
+              255, 128, 0, 128), //Cor de fundo 255, 170, 0, 255
           appBarTheme: const AppBarTheme(elevation: 0),
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
