@@ -17,7 +17,6 @@ class DrawerTile extends StatelessWidget {
     return InkWell(
       onTap: () {
         context.read<PageManager>().setPage(page);
-        //TODO Talvez o problema esteja aqui
       },
       child: SizedBox(
         height: 60,
@@ -36,7 +35,7 @@ class DrawerTile extends StatelessWidget {
               style: TextStyle(
                   fontSize: 16,
                   color: curPage == page ? primaryColor : Colors.grey[700]),
-            )
+            ),
           ],
         ),
       ),

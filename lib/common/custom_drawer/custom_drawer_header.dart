@@ -14,14 +14,19 @@ class CustomDrawerHeader extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              //todo Colocar imagem "Logo da empresa aqui"
+              //todo Essa imagem da logo do drawer não está no curso"
+              SizedBox(
+                height: 75.0,
+                child: Image.asset('android/assets/images/logo.png'),
+              ),
+              /*
               Text(
                 'Açaí da Juh\n',
                 style: TextStyle(
                   fontSize: 34,
                   fontWeight: FontWeight.bold,
                 ),
-              ),
+              ), */
               Text(
                 'Olá, ${userManager.user?.name ?? ''}', //* printa o nome do usuário
                 overflow: TextOverflow.ellipsis,
