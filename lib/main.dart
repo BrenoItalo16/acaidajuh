@@ -1,3 +1,4 @@
+import 'package:acaidajuh/models/admin_users_manager.dart';
 import 'package:acaidajuh/models/home_manager.dart';
 import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/product_manager.dart';
@@ -38,6 +39,12 @@ class MyApp extends StatelessWidget {
           update: (_, userManager, cartManager) =>
               cartManager..updateUser(userManager),
         ),
+        ChangeNotifierProxyProvider<UserManager, AdminUsersManager>(
+          create: (_) => AdminUsersManager(),
+          lazy: false,
+          update: (_, userManager, adminUsersManager) =>
+              adminUsersManager..updateUser(userManager),
+        )
       ],
       child: MaterialApp(
         title: 'Açaí da Juh',

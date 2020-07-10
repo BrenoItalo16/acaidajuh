@@ -14,7 +14,9 @@
 14    <uses-permission android:name="android.permission.INTERNET" />
 14-->C:\src\apps\acaidajuh\android\app\src\debug\AndroidManifest.xml:6:5-66
 14-->C:\src\apps\acaidajuh\android\app\src\debug\AndroidManifest.xml:6:22-64
-15    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+15    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+15-->[:vibration] C:\src\apps\acaidajuh\build\vibration\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-66
+15-->[:vibration] C:\src\apps\acaidajuh\build\vibration\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-63
 16    <!-- <uses-sdk android:minSdkVersion="14" /> -->
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 17-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\1d5c8f6a5a5232781dd5f1cce3a3f358\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:5-79

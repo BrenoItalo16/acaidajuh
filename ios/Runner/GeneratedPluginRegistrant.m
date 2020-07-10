@@ -28,6 +28,12 @@
 @import firebase_storage;
 #endif
 
+#if __has_include(<vibration/VibrationPlugin.h>)
+#import <vibration/VibrationPlugin.h>
+#else
+@import vibration;
+#endif
+
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
@@ -35,6 +41,7 @@
   [FLTFirebaseAuthPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseAuthPlugin"]];
   [FLTFirebaseCorePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseCorePlugin"]];
   [FLTFirebaseStoragePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseStoragePlugin"]];
+  [VibrationPlugin registerWithRegistrar:[registry registrarForPlugin:@"VibrationPlugin"]];
 }
 
 @end

@@ -12,6 +12,7 @@ MERGED from [:firebase_storage] C:\src\apps\acaidajuh\build\firebase_storage\int
 MERGED from [:firebase_core] C:\src\apps\acaidajuh\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core_web] C:\src\apps\acaidajuh\build\firebase_core_web\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_auth_web] C:\src\apps\acaidajuh\build\firebase_auth_web\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:vibration] C:\src\apps\acaidajuh\build\vibration\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\de2048d582fe7ed2344b667841ac1eb6\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\e4577aac3afa7ec004a3464e20f578bd\firebase-auth-19.2.0\AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\1d5c8f6a5a5232781dd5f1cce3a3f358\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:2:1-26:12
@@ -154,6 +155,8 @@ MERGED from [:firebase_core_web] C:\src\apps\acaidajuh\build\firebase_core_web\i
 MERGED from [:firebase_core_web] C:\src\apps\acaidajuh\build\firebase_core_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth_web] C:\src\apps\acaidajuh\build\firebase_auth_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth_web] C:\src\apps\acaidajuh\build\firebase_auth_web\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:vibration] C:\src\apps\acaidajuh\build\vibration\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:vibration] C:\src\apps\acaidajuh\build\vibration\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\de2048d582fe7ed2344b667841ac1eb6\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\de2048d582fe7ed2344b667841ac1eb6\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\e4577aac3afa7ec004a3464e20f578bd\firebase-auth-19.2.0\AndroidManifest.xml:21:5-44
@@ -272,6 +275,10 @@ ADDED from [:firebase_core] C:\src\apps\acaidajuh\build\firebase_core\intermedia
 		ADDED from [:firebase_core] C:\src\apps\acaidajuh\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_core] C:\src\apps\acaidajuh\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-123
+uses-permission#android.permission.VIBRATE
+ADDED from [:vibration] C:\src\apps\acaidajuh\build\vibration\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-66
+	android:name
+		ADDED from [:vibration] C:\src\apps\acaidajuh\build\vibration\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-63
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\srbre\.gradle\caches\transforms-2\files-2.1\e4577aac3afa7ec004a3464e20f578bd\firebase-auth-19.2.0\AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents
