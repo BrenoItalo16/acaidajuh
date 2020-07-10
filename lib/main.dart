@@ -4,6 +4,7 @@ import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/product_manager.dart';
 import 'package:acaidajuh/models/user_manager.dart';
 import 'package:acaidajuh/screens/cart/cart_screen.dart';
+import 'package:acaidajuh/screens/edit_product.dart/edit_product_screen.dart';
 import 'package:acaidajuh/screens/login/login_screen.dart';
 import 'package:acaidajuh/screens/product/product_screen.dart';
 import 'package:acaidajuh/screens/signup/signup_screen.dart';
@@ -77,6 +78,10 @@ class MyApp extends StatelessWidget {
             case '/cart':
               return MaterialPageRoute(
                 builder: (_) => CartScreen(),
+              );
+            case '/edit_product':
+              return MaterialPageRoute(
+                builder: (_) => EditProductScreen(),
               );
             default:
               return MaterialPageRoute(builder: (_) => BaseScreen());
