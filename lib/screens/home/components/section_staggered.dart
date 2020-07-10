@@ -1,4 +1,5 @@
 import 'package:acaidajuh/models/section.dart';
+import 'package:acaidajuh/screens/home/components/item_tile.dart';
 import 'package:acaidajuh/screens/home/components/section_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -23,10 +24,7 @@ class SectionStaggered extends StatelessWidget {
             crossAxisCount: 4,
             itemCount: section.items.length,
             itemBuilder: (context, index) {
-              return Image.network(
-                section.items[index].image,
-                fit: BoxFit.cover,
-              );
+              return ItemTile(section.items[index]);
             },
             staggeredTileBuilder: (index) => StaggeredTile.count(
               2,
