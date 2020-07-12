@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:acaidajuh/models/product.dart';
+import 'package:acaidajuh/screens/edit_product.dart/components/image_source_sheet.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class ImagesForm extends StatelessWidget {
         return AspectRatio(
           aspectRatio: 1,
           child: Carousel(
-            images: state.value.map(
+            images: state.value.map<Widget>(
               (image) {
                 return Stack(
                   fit: StackFit.expand,
@@ -44,7 +45,23 @@ class ImagesForm extends StatelessWidget {
                   ],
                 );
               },
-            ).toList(),
+            ).toList()
+              ..add(
+                Material(
+                  color: Colors.grey[100],
+                  child: IconButton(
+                    icon: Icon(Icons.add_a_photo),
+                    color: Theme.of(context).primaryColor,
+                    iconSize: 50,
+                    onPressed: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (_) => ImageSourceSheet(),
+                      );
+                    },
+                  ),
+                ),
+              ),
             dotSize: 4,
             dotSpacing: 15,
             dotBgColor: Colors.transparent,
