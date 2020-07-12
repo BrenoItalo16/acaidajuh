@@ -296,6 +296,10 @@
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\11139722c985ff28aa4e11b218f92cf9\\play-services-base-17.1.0\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
     },
     {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\xml_flutter_image_picker_file_paths.xml.flat",
+        "source": "C:\\src\\apps\\acaidajuh\\build\\image_picker\\intermediates\\packaged_res\\debug\\xml\\flutter_image_picker_file_paths.xml"
+    },
+    {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_standard_color_18.png.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\11139722c985ff28aa4e11b218f92cf9\\play-services-base-17.1.0\\res\\drawable-xxhdpi-v4\\googleg_standard_color_18.png"
     },
