@@ -11,8 +11,14 @@ class ImagesForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FormField<List<dynamic>>(
-      initialValue: product.images,
+      initialValue: List.from(product.images),
       builder: (state) {
+        void onImageSelected(File file) {
+          state.value.add(file);
+          state.didChange(state.value);
+          Navigator.of(context).pop();
+        }
+
         return AspectRatio(
           aspectRatio: 1,
           child: Carousel(
@@ -56,7 +62,9 @@ class ImagesForm extends StatelessWidget {
                     onPressed: () {
                       showModalBottomSheet(
                         context: context,
-                        builder: (_) => ImageSourceSheet(),
+                        builder: (_) => ImageSourceSheet(
+                          onImageSelected: onImageSelected,
+                        ),
                       );
                     },
                   ),
