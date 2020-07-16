@@ -1,5 +1,6 @@
 import 'package:acaidajuh/common/custom_drawer/custom_drawer.dart';
 import 'package:acaidajuh/models/product_manager.dart';
+import 'package:acaidajuh/models/user_manager.dart';
 import 'package:acaidajuh/screens/products/components/product_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -66,6 +67,22 @@ class ProductsScreen extends StatelessWidget {
                     productManager.search = '';
                   },
                 );
+              }
+            },
+          ),
+          Consumer<UserManager>(
+            builder: (_, userManager, __) {
+              if (userManager.adminEnabled) {
+                return IconButton(
+                  icon: Icon(Icons.add),
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(
+                      '/edit_product',
+                    );
+                  },
+                );
+              } else {
+                return Container();
               }
             },
           ),

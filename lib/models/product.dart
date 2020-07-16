@@ -3,6 +3,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 
 class Product extends ChangeNotifier {
+  Product({this.id, this.name, this.description, this.images, this.sizes}) {
+    images = images ?? [];
+    sizes = sizes ?? [];
+  }
+
   Product.fromDocument(DocumentSnapshot document) {
     id = document.documentID;
     name = document['name'] as String;
@@ -13,11 +18,16 @@ class Product extends ChangeNotifier {
         .toList();
   }
 
+  final Firestore firestore = Firestore.instance;
+  DocumentReference get firestoreRef => firestore.document('products/$id');
+
   String id;
   String name;
   String description;
   List<String> images;
   List<ItemSize> sizes;
+
+  List<dynamic> newImages;
 
   ItemSize _selectedSize;
 
@@ -54,5 +64,39 @@ class Product extends ChangeNotifier {
     } catch (e) {
       return null;
     }
+  }
+
+  List<Map<String, dynamic>> exportSizeList() {
+    return sizes.map((size) => size.toMap()).toList();
+  }
+
+  Future<void> save() async {
+    final Map<String, dynamic> data = {
+      'name': name,
+      'description': description,
+      'sizes': exportSizeList(),
+    };
+
+    if (id == null) {
+      final doc = await firestore.collection('products').add(data);
+      id = doc.documentID;
+    } else {
+      await firestoreRef.updateData(data);
+    }
+  }
+
+  Product clone() {
+    return Product(
+      id: id,
+      name: name,
+      description: description,
+      images: List.from(images),
+      sizes: sizes.map((size) => size.clone()).toList(),
+    );
+  }
+
+  @override
+  String toString() {
+    return 'Product{id: $id, name: $name, description: $description, images: $images, sizes: $sizes, newImages: $newImages}';
   }
 }

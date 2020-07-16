@@ -4,15 +4,18 @@ import 'package:acaidajuh/screens/edit_product.dart/components/sizes_form.dart';
 import 'package:flutter/material.dart';
 
 class EditProductScreen extends StatelessWidget {
-  EditProductScreen(this.product);
+  EditProductScreen(Product p)
+      : editing = p != null,
+        product = p != null ? p.clone() : Product();
   final Product product;
+  final bool editing;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Editar anúncio'),
+        title: Text(editing ? 'Editar produto' : 'Criar produto'),
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
@@ -40,6 +43,7 @@ class EditProductScreen extends StatelessWidget {
                       if (name.length < 6) return 'Título muito curto!';
                       return null;
                     },
+                    onSaved: (name) => product.name = name,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 4),
@@ -77,17 +81,30 @@ class EditProductScreen extends StatelessWidget {
                       if (desc.length < 10) return 'Descrição muito curta';
                       return null;
                     },
+                    onSaved: (desc) => product.description = desc,
                   ),
                   SizesForm(product),
-                  RaisedButton(
-                    onPressed: () {
-                      if (formKey.currentState.validate()) {
-                        debugPrint('Válido');
-                      } else {
-                        debugPrint('Inválido');
-                      }
-                    },
-                    child: const Text('Salvar'),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    height: 44,
+                    child: RaisedButton(
+                      onPressed: () {
+                        if (formKey.currentState.validate()) {
+                          formKey.currentState.save();
+
+                          product.save();
+                        }
+                      },
+                      textColor: Colors.white,
+                      color: primaryColor,
+                      disabledColor: primaryColor.withAlpha(100),
+                      child: const Text(
+                        'Salvar',
+                        style: TextStyle(fontSize: 18.0),
+                      ),
+                    ),
                   )
                 ],
               ),
