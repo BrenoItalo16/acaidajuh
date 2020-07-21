@@ -33,7 +33,7 @@ class SectionHeader extends StatelessWidget {
             iconData: Icons.remove,
             color: Colors.white,
             onTap: () {
-              homeManager.removeSectiono(section);
+              homeManager.removeSection(section);
             },
           ),
         ],
