@@ -7,7 +7,10 @@ class HomeManager extends ChangeNotifier {
     _loadSections();
   }
 
-  List<Section> sections = [];
+  // ignore: prefer_final_fields
+  List<Section> _sections = [];
+  // ignore: prefer_final_fields
+  List<Section> _editingSections = [];
 
   bool editing = false;
 
@@ -15,16 +18,26 @@ class HomeManager extends ChangeNotifier {
 
   Future<void> _loadSections() async {
     firestore.collection('home').snapshots().listen((snapshot) {
-      sections.clear();
+      _sections.clear();
       for (final DocumentSnapshot document in snapshot.documents) {
-        sections.add(Section.fromDocument(document));
+        _sections.add(Section.fromDocument(document));
       }
       notifyListeners();
     });
   }
 
+  List<Section> get sections {
+    if (editing)
+      // ignore: curly_braces_in_flow_control_structures
+      return _editingSections;
+    else
+      // ignore: curly_braces_in_flow_control_structures
+      return _sections;
+  }
+
   void enterEditing() {
     editing = true;
+    _editingSections = _sections.map((s) => s.clone()).toList();
     notifyListeners();
   }
 
