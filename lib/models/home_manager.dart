@@ -27,6 +27,11 @@ class HomeManager extends ChangeNotifier {
     notifyListeners();
   }
 
+  void removeSection(Section section) {
+    _editingSections.remove(section);
+    notifyListeners();
+  }
+
   List<Section> get sections {
     if (editing)
       // ignore: curly_braces_in_flow_control_structures
