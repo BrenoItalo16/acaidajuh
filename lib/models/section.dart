@@ -2,7 +2,9 @@ import 'package:acaidajuh/models/section_item.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Section {
-  Section({this.name, this.type, this.items});
+  Section({this.name, this.type, this.items}) {
+    items = items ?? [];
+  }
   Section.fromDocument(DocumentSnapshot document) {
     name = document.data['name'] as String;
     type = document.data['type'] as String;

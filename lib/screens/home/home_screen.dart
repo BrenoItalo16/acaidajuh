@@ -1,6 +1,7 @@
 import 'package:acaidajuh/common/custom_drawer/custom_drawer.dart';
 import 'package:acaidajuh/models/home_manager.dart';
 import 'package:acaidajuh/models/user_manager.dart';
+import 'package:acaidajuh/screens/home/components/add_section_widget.dart';
 import 'package:acaidajuh/screens/home/components/section_staggered.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
-            //Todo: inserir aqui o backgroundImage e excluir o decoration
+            //? inserir aqui o backgroundImage e excluir o decoration
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: const [
@@ -94,6 +95,10 @@ class HomeScreen extends StatelessWidget {
                       }
                     },
                   ).toList();
+
+                  if (homeManager.editing)
+                    // ignore: curly_braces_in_flow_control_structures
+                    children.add(AddSectionWidget(homeManager));
 
                   return SliverList(
                     delegate: SliverChildListDelegate(children),

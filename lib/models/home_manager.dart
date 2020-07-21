@@ -1,17 +1,13 @@
-import 'package:acaidajuh/models/section.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:acaidajuh/models/section.dart';
 
 class HomeManager extends ChangeNotifier {
   HomeManager() {
     _loadSections();
   }
-
-  // ignore: prefer_final_fields
   List<Section> _sections = [];
-  // ignore: prefer_final_fields
   List<Section> _editingSections = [];
-
   bool editing = false;
 
   final Firestore firestore = Firestore.instance;
@@ -24,6 +20,11 @@ class HomeManager extends ChangeNotifier {
       }
       notifyListeners();
     });
+  }
+
+  void addSection(Section section) {
+    _editingSections.add(section);
+    notifyListeners();
   }
 
   List<Section> get sections {
