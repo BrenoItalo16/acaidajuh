@@ -4,7 +4,7 @@ class SectionItem {
     image = map['image'] as String;
     product = map['product'] as String;
   }
-  String image;
+  dynamic image;
   String product;
 
   SectionItem clone() {
