@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class ItemSize {
   ItemSize({this.name, this.price, this.stock});
 

@@ -64,6 +64,7 @@ class LoginScreen extends StatelessWidget {
                         obscureText: true,
                         validator: (pass) {
                           if (pass.isEmpty || pass.length < 6)
+                            // ignore: curly_braces_in_flow_control_structures
                             return 'Senha inválida';
                           return null;
                         },

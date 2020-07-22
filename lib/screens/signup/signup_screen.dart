@@ -24,6 +24,7 @@ class SignUpScreen extends StatelessWidget {
           child: Form(
             key: formKey,
             child: Consumer<UserManager>(
+              // ignore: avoid_types_as_parameter_names
               builder: (_, UserManager, __) {
                 //! Editar
                 return ListView(
@@ -36,8 +37,10 @@ class SignUpScreen extends StatelessWidget {
                       enabled: !UserManager.loading,
                       validator: (name) {
                         if (name.isEmpty)
+                          // ignore: curly_braces_in_flow_control_structures
                           return 'Campo obrigatório!';
                         else if (name.trim().split(' ').length <= 1)
+                          // ignore: curly_braces_in_flow_control_structures
                           return 'Preencha seu Nome completo!';
                         return null;
                       },
@@ -52,6 +55,7 @@ class SignUpScreen extends StatelessWidget {
                         keyboardType: TextInputType.emailAddress,
                         validator: (email) {
                           if (email.isEmpty)
+                            // ignore: curly_braces_in_flow_control_structures
                             return 'Campo obrigatório!';
                           else if (!emailValid(email)) return 'Email inválido';
                           return null;
@@ -66,6 +70,7 @@ class SignUpScreen extends StatelessWidget {
                       obscureText: true,
                       validator: (pass) {
                         if (pass.isEmpty)
+                          // ignore: curly_braces_in_flow_control_structures
                           return 'Campo obrigatório!';
                         else if (pass.length < 6) return 'Senha muito curta';
                         return null;
@@ -82,6 +87,7 @@ class SignUpScreen extends StatelessWidget {
                       obscureText: true,
                       validator: (pass) {
                         if (pass.isEmpty)
+                          // ignore: curly_braces_in_flow_control_structures
                           return 'Campo obrigatório!';
                         else if (pass.length < 6) return 'Senha muito curta';
                         return null;

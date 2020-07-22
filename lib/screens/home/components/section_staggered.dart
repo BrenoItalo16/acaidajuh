@@ -36,8 +36,10 @@ class SectionStaggered extends StatelessWidget {
                       : section.items.length,
                   itemBuilder: (context, index) {
                     if (index < section.items.length)
+                      // ignore: curly_braces_in_flow_control_structures
                       return ItemTile(section.items[index]);
                     else
+                      // ignore: curly_braces_in_flow_control_structures
                       return AddTileWidget();
                   },
                   staggeredTileBuilder: (index) => StaggeredTile.count(
