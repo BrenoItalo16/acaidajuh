@@ -6,7 +6,7 @@ class HomeManager extends ChangeNotifier {
   HomeManager() {
     _loadSections();
   }
-  List<Section> _sections = [];
+  final List<Section> _sections = [];
   List<Section> _editingSections = [];
   bool editing = false;
 

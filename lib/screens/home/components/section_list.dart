@@ -32,8 +32,10 @@ class SectionList extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (_, index) {
                       if (index < section.items.length)
+                        // ignore: curly_braces_in_flow_control_structures
                         return ItemTile(section.items[index]);
                       else
+                        // ignore: curly_braces_in_flow_control_structures
                         return AddTileWidget();
                     },
                     separatorBuilder: (_, __) => const SizedBox(

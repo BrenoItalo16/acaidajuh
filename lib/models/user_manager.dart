@@ -75,6 +75,7 @@ class UserManager extends ChangeNotifier {
         user.admin = true;
       }
 
+      // ignore: avoid_print
       print(user.admin);
 
       notifyListeners();
