@@ -3,12 +3,14 @@ import 'package:acaidajuh/models/home_manager.dart';
 import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/product_manager.dart';
 import 'package:acaidajuh/models/user_manager.dart';
+import 'package:acaidajuh/screens/address/address_screen.dart';
 import 'package:acaidajuh/screens/cart/cart_screen.dart';
 import 'package:acaidajuh/screens/edit_product.dart/edit_product_screen.dart';
 import 'package:acaidajuh/screens/login/login_screen.dart';
 import 'package:acaidajuh/screens/product/product_screen.dart';
 import 'package:acaidajuh/screens/select_product/select_product_screen.dart';
 import 'package:acaidajuh/screens/signup/signup_screen.dart';
+import 'package:acaidajuh/services/cepaberto_service.dart';
 import 'package:flutter/material.dart';
 import 'package:acaidajuh/screens/base/base_screen.dart';
 import 'package:provider/provider.dart';
@@ -16,6 +18,8 @@ import 'models/cart_manager.dart';
 
 void main() {
   runApp(MyApp());
+
+  CepAbertoService().getAddressFromCep('59508000');
 }
 
 class MyApp extends StatelessWidget {
@@ -79,6 +83,10 @@ class MyApp extends StatelessWidget {
             case '/cart':
               return MaterialPageRoute(
                 builder: (_) => CartScreen(),
+              );
+            case '/address':
+              return MaterialPageRoute(
+                builder: (_) => AddressScreen(),
               );
             case '/select_product':
               return MaterialPageRoute(
