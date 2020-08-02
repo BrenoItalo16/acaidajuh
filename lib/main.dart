@@ -19,7 +19,9 @@ import 'models/cart_manager.dart';
 void main() {
   runApp(MyApp());
 
-  CepAbertoService().getAddressFromCep('59508000');
+  CepAbertoService()
+      .getAddressFromCep('59508000')
+      .then((address) => print(address));
 }
 
 class MyApp extends StatelessWidget {
