@@ -1,7 +1,10 @@
+import 'package:acaidajuh/models/address.dart';
 import 'package:acaidajuh/models/cart_product.dart';
+import 'package:acaidajuh/models/cepaberto_address.dart';
 import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/user.dart';
 import 'package:acaidajuh/models/user_manager.dart';
+import 'package:acaidajuh/services/cepaberto_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -9,6 +12,7 @@ class CartManager extends ChangeNotifier {
   List<CartProduct> items = [];
 
   User user;
+  Address address;
 
   num productsPrice = 0.0;
 
@@ -81,5 +85,27 @@ class CartManager extends ChangeNotifier {
       if (!cartProduct.hasStock) return false;
     }
     return true;
+  }
+
+  // address
+  Future<void> getAddress(String cep) async {
+    final cepAbertoService = CepAbertoService();
+    try {
+      final cepAbertoAddress = await cepAbertoService.getAddressFromCep(cep);
+      if (cepAbertoAddress != null) {
+        address = Address(
+          street: cepAbertoAddress.logradouro,
+          district: cepAbertoAddress.bairro,
+          zipCode: cepAbertoAddress.cep,
+          city: cepAbertoAddress.cidade.nome,
+          state: cepAbertoAddress.estado.sigla,
+          lat: cepAbertoAddress.latitude,
+          long: cepAbertoAddress.longitude,
+        );
+        notifyListeners();
+      }
+    } catch (e) {
+      debugPrint(e.toString());
+    }
   }
 }
