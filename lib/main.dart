@@ -10,7 +10,6 @@ import 'package:acaidajuh/screens/login/login_screen.dart';
 import 'package:acaidajuh/screens/product/product_screen.dart';
 import 'package:acaidajuh/screens/select_product/select_product_screen.dart';
 import 'package:acaidajuh/screens/signup/signup_screen.dart';
-import 'package:acaidajuh/services/cepaberto_service.dart';
 import 'package:flutter/material.dart';
 import 'package:acaidajuh/screens/base/base_screen.dart';
 import 'package:provider/provider.dart';
@@ -19,9 +18,9 @@ import 'models/cart_manager.dart';
 void main() {
   runApp(MyApp());
 
-  CepAbertoService()
-      .getAddressFromCep('59508000')
-      .then((address) => print(address));
+  //CepAbertoService();
+  //     .getAddressFromCep('59508000')
+  //     .then((address) => print(address));
 }
 
 class MyApp extends StatelessWidget {

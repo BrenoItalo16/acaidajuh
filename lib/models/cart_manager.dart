@@ -1,12 +1,13 @@
-import 'package:acaidajuh/models/address.dart';
-import 'package:acaidajuh/models/cart_product.dart';
-import 'package:acaidajuh/models/cepaberto_address.dart';
-import 'package:acaidajuh/models/product.dart';
-import 'package:acaidajuh/models/user.dart';
-import 'package:acaidajuh/models/user_manager.dart';
-import 'package:acaidajuh/services/cepaberto_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:acaidajuh/models/address.dart';
+import 'package:acaidajuh/models/cart_product.dart';
+import 'package:acaidajuh/models/product.dart';
+import 'package:acaidajuh/models/cepaberto_address.dart';
+import 'package:acaidajuh/models/user.dart';
+import 'package:acaidajuh/models/user_manager.dart';
+import 'package:acaidajuh/screens/address/address_screen.dart';
+import 'package:acaidajuh/services/cepaberto_service.dart';
 
 class CartManager extends ChangeNotifier {
   List<CartProduct> items = [];
@@ -19,7 +20,6 @@ class CartManager extends ChangeNotifier {
   void updateUser(UserManager userManager) {
     user = userManager.user;
     items.clear();
-
     if (user != null) {
       _loadCartItems();
     }
@@ -57,7 +57,6 @@ class CartManager extends ChangeNotifier {
 
   void _onItemUpdated() {
     productsPrice = 0.0;
-
     for (int i = 0; i < items.length; i++) {
       final cartProduct = items[i];
       if (cartProduct.quantity == 0) {
@@ -68,13 +67,11 @@ class CartManager extends ChangeNotifier {
       productsPrice += cartProduct.totalPrice;
       _updateCartProduct(cartProduct);
     }
-
     notifyListeners();
   }
 
   void _updateCartProduct(CartProduct cartProduct) {
     if (cartProduct.id != null)
-      // ignore: curly_braces_in_flow_control_structures
       user.cartReference
           .document(cartProduct.id)
           .updateData(cartProduct.toCartItemMap());
@@ -87,21 +84,22 @@ class CartManager extends ChangeNotifier {
     return true;
   }
 
-  // address
+  // ADDRESS
   Future<void> getAddress(String cep) async {
     final cepAbertoService = CepAbertoService();
+
     try {
       final cepAbertoAddress = await cepAbertoService.getAddressFromCep(cep);
+
       if (cepAbertoAddress != null) {
         address = Address(
-          street: cepAbertoAddress.logradouro,
-          district: cepAbertoAddress.bairro,
-          zipCode: cepAbertoAddress.cep,
-          city: cepAbertoAddress.cidade.nome,
-          state: cepAbertoAddress.estado.sigla,
-          lat: cepAbertoAddress.latitude,
-          long: cepAbertoAddress.longitude,
-        );
+            street: cepAbertoAddress.logradouro,
+            district: cepAbertoAddress.bairro,
+            zipCode: cepAbertoAddress.cep,
+            city: cepAbertoAddress.cidade.nome,
+            state: cepAbertoAddress.estado.sigla,
+            lat: cepAbertoAddress.latitude,
+            long: cepAbertoAddress.longitude);
         notifyListeners();
       }
     } catch (e) {

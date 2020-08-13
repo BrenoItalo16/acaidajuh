@@ -40,7 +40,7 @@ class CepInputField extends StatelessWidget {
           },
           textColor: Colors.white,
           color: primaryColor,
-          disabledColor: primaryColor.withAlpha(100),
+          //disabledColor: primaryColor.withAlpha(100),
           child: const Text('Buscar CEP'),
         ),
       ],

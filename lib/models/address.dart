@@ -1,5 +1,3 @@
-import 'package:acaidajuh/screens/address/address_screen.dart';
-
 class Address {
   Address(
       {this.street,
