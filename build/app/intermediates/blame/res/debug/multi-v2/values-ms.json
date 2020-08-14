@@ -4,7 +4,7 @@
             "outputFile": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\0a88e15c27fe8f45486868f55d363bed\\core-1.1.0\\res\\values-ms\\values-ms.xml",
+                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\6f5a09b4953ee13b34e15b87364445ea\\core-1.2.0\\res\\values-ms\\values-ms.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\514ea350bf33455db88a7c60a0cc631e\\jetified-play-services-basement-17.0.0\\res\\values-ms\\values.xml",
+                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\393353140137ec69a2f99ceb1eb65706\\jetified-play-services-basement-17.2.1\\res\\values-ms\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\11139722c985ff28aa4e11b218f92cf9\\play-services-base-17.1.0\\res\\values-ms\\values.xml",
+                    "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\3e048612d3799077421484434852ba6c\\play-services-base-17.2.1\\res\\values-ms\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

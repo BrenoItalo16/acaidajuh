@@ -6,6 +6,7 @@ import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/user.dart';
 import 'package:acaidajuh/models/user_manager.dart';
 import 'package:acaidajuh/services/cepaberto_service.dart';
+import 'package:geolocator/geolocator.dart';
 
 class CartManager extends ChangeNotifier {
   List<CartProduct> items = [];
@@ -14,6 +15,8 @@ class CartManager extends ChangeNotifier {
   Address address;
 
   num productsPrice = 0.0;
+
+  final Firestore firestore = Firestore.instance;
 
   void updateUser(UserManager userManager) {
     user = userManager.user;
@@ -106,8 +109,29 @@ class CartManager extends ChangeNotifier {
     }
   }
 
+  void setAddress(Address address) {
+    this.address = address;
+
+    calculateDelivery(address.lat, address.long);
+  }
+
   void removeAddress() {
     address = null;
     notifyListeners();
+  }
+
+  Future<void> calculateDelivery(double lat, double long) async {
+    final DocumentSnapshot doc = await firestore.document('aux/delivery').get();
+    final latStore = doc.data['lat'] as double;
+    final longStore = doc.data['long'] as double;
+
+    double dis =
+        await Geolocator().distanceBetween(latStore, longStore, lat, long);
+
+    final maxkm = doc.data['maxkm'] as num;
+
+    dis /= 1000.0;
+
+    print('Distance $dis');
   }
 }
