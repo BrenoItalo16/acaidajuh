@@ -24,7 +24,7 @@ class ProductScreen extends StatelessWidget {
               builder: (_, userManager, __) {
                 if (userManager.adminEnabled) {
                   return IconButton(
-                    icon: Icon(Icons.edit),
+                    icon: const Icon(Icons.edit),
                     onPressed: () {
                       Navigator.of(context).pushReplacementNamed(
                         '/edit_product',
@@ -65,7 +65,7 @@ class ProductScreen extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     product.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                     ),
@@ -88,8 +88,8 @@ class ProductScreen extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16, bottom: 8),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 16, bottom: 8),
                     child: Text(
                       'Descrição:',
                       style: TextStyle(
@@ -105,8 +105,8 @@ class ProductScreen extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16, bottom: 8),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 16, bottom: 8),
                     child: Text(
                       'Tamanhos:',
                       style: TextStyle(

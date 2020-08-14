@@ -39,7 +39,7 @@ class EditProductScreen extends StatelessWidget {
                         hintText: 'Título',
                         border: InputBorder.none,
                       ),
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),
@@ -67,8 +67,8 @@ class EditProductScreen extends StatelessWidget {
                         color: primaryColor,
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 16),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
                       child: Text(
                         'Descrição',
                         style: TextStyle(
@@ -113,7 +113,7 @@ class EditProductScreen extends StatelessWidget {
                             color: primaryColor,
                             disabledColor: primaryColor.withAlpha(100),
                             child: product.loading
-                                ? CircularProgressIndicator(
+                                ? const CircularProgressIndicator(
                                     valueColor: AlwaysStoppedAnimation(
                                       Colors.white,
                                     ),

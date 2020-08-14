@@ -40,7 +40,7 @@ class SizeWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
               child: Text(
                 size.name,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
               ),

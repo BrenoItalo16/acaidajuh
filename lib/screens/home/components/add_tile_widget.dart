@@ -38,7 +38,7 @@ class AddTileWidget extends StatelessWidget {
         },
         child: Container(
           color: Colors.white.withAlpha(30),
-          child: Icon(
+          child: const Icon(
             Icons.add,
             color: Colors.white,
           ),

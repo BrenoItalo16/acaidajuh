@@ -3,10 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:acaidajuh/models/address.dart';
 import 'package:acaidajuh/models/cart_product.dart';
 import 'package:acaidajuh/models/product.dart';
-import 'package:acaidajuh/models/cepaberto_address.dart';
 import 'package:acaidajuh/models/user.dart';
 import 'package:acaidajuh/models/user_manager.dart';
-import 'package:acaidajuh/screens/address/address_screen.dart';
 import 'package:acaidajuh/services/cepaberto_service.dart';
 
 class CartManager extends ChangeNotifier {
@@ -72,6 +70,7 @@ class CartManager extends ChangeNotifier {
 
   void _updateCartProduct(CartProduct cartProduct) {
     if (cartProduct.id != null)
+      // ignore: curly_braces_in_flow_control_structures
       user.cartReference
           .document(cartProduct.id)
           .updateData(cartProduct.toCartItemMap());
@@ -105,5 +104,10 @@ class CartManager extends ChangeNotifier {
     } catch (e) {
       debugPrint(e.toString());
     }
+  }
+
+  void removeAddress() {
+    address = null;
+    notifyListeners();
   }
 }

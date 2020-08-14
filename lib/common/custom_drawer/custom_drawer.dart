@@ -11,10 +11,10 @@ class CustomDrawer extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  const Color.fromARGB(255, 255, 255,
+                  Color.fromARGB(255, 255, 255,
                       255), //* altera a cor de parte de cima do drawer
                   Colors.white10, //* altera a cor de parte de baixo do drawer
                 ],
@@ -27,19 +27,21 @@ class CustomDrawer extends StatelessWidget {
             children: <Widget>[
               CustomDrawerHeader(),
               const Divider(),
-              DrawerTile(iconData: Icons.home, title: 'Home', page: 0),
-              DrawerTile(
+              const DrawerTile(iconData: Icons.home, title: 'Home', page: 0),
+              const DrawerTile(
                   iconData: Icons.format_list_numbered_rtl,
                   title: 'Meus Pedidos',
                   page: 1),
-              DrawerTile(iconData: Icons.list, title: 'Produtos', page: 2),
-              DrawerTile(iconData: Icons.location_on, title: 'Lojas', page: 3),
+              const DrawerTile(
+                  iconData: Icons.list, title: 'Produtos', page: 2),
+              const DrawerTile(
+                  iconData: Icons.location_on, title: 'Lojas', page: 3),
               Consumer<UserManager>(
                 builder: (_, userManager, __) {
                   if (userManager.adminEnabled) {
                     return Column(
-                      children: <Widget>[
-                        const Divider(),
+                      children: const <Widget>[
+                        Divider(),
                         DrawerTile(
                             iconData: Icons.settings,
                             title: 'Usuários',
@@ -48,7 +50,7 @@ class CustomDrawer extends StatelessWidget {
                             iconData: Icons.settings_applications,
                             title: 'Pedidos',
                             page: 5),
-                        const Divider(),
+                        Divider(),
                       ],
                     );
                   } else {

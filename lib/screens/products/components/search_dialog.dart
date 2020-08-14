@@ -20,7 +20,7 @@ class SearchDialog extends StatelessWidget {
                 border: InputBorder.none,
                 contentPadding: const EdgeInsets.symmetric(vertical: 15),
                 prefixIcon: IconButton(
-                  icon: Icon(Icons.arrow_back),
+                  icon: const Icon(Icons.arrow_back),
                   color: Colors.grey[700],
                   onPressed: () {
                     Navigator.of(context).pop();

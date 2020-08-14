@@ -34,7 +34,7 @@ class ProductListTile extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         product.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w800,
                         ),

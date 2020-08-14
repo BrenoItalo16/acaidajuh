@@ -48,7 +48,7 @@ class ImagesForm extends StatelessWidget {
                         Align(
                           alignment: Alignment.topRight,
                           child: IconButton(
-                            icon: Icon(Icons.remove),
+                            icon: const Icon(Icons.remove),
                             color: Colors.red,
                             onPressed: () {
                               state.value.remove(image);
@@ -64,7 +64,7 @@ class ImagesForm extends StatelessWidget {
                     Material(
                       color: Colors.grey[100],
                       child: IconButton(
-                        icon: Icon(Icons.add_a_photo),
+                        icon: const Icon(Icons.add_a_photo),
                         color: Theme.of(context).primaryColor,
                         iconSize: 50,
                         onPressed: () {

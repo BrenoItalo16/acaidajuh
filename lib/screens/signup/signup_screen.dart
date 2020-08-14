@@ -112,9 +112,8 @@ class SignUpScreen extends StatelessWidget {
 
                                     if (user.password != user.confirmPassword) {
                                       scaffoldKey.currentState
-                                          .showSnackBar(SnackBar(
-                                        content:
-                                            const Text('Senhas não coincidem!'),
+                                          .showSnackBar(const SnackBar(
+                                        content: Text('Senhas não coincidem!'),
                                         backgroundColor: Colors.red,
                                       ));
                                       return;
@@ -139,7 +138,7 @@ class SignUpScreen extends StatelessWidget {
                                 },
                           child: UserManager.loading
                               ? //! Esse UserManager começa com "u" minusculo no tutorial
-                              CircularProgressIndicator(
+                              const CircularProgressIndicator(
                                   //TODO A animação de loadin fica aqui
                                   valueColor:
                                       AlwaysStoppedAnimation(Colors.white))

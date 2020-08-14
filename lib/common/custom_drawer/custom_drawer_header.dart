@@ -32,7 +32,8 @@ class CustomDrawerHeader extends StatelessWidget {
                 'Olá, ${userManager.user?.name ?? ''}', //* printa o nome do usuário
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               GestureDetector(
                 onTap: () {

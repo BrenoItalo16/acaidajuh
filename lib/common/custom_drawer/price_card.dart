@@ -17,7 +17,7 @@ class PriceCard extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
         child: Column(
           children: <Widget>[
-            Text(
+            const Text(
               'Resumo do pedido',
               textAlign: TextAlign.start,
               style: TextStyle(
@@ -44,7 +44,7 @@ class PriceCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(
+                const Text(
                   'Total',
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
