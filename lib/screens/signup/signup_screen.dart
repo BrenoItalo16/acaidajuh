@@ -24,8 +24,7 @@ class SignUpScreen extends StatelessWidget {
           child: Form(
             key: formKey,
             child: Consumer<UserManager>(
-              // ignore: avoid_types_as_parameter_names
-              builder: (_, UserManager, __) {
+              builder: (_, userManager, __) {
                 //! Editar
                 return ListView(
                   padding: const EdgeInsets.all(16),
@@ -34,7 +33,7 @@ class SignUpScreen extends StatelessWidget {
                     TextFormField(
                       decoration:
                           const InputDecoration(hintText: 'Nome completo'),
-                      enabled: !UserManager.loading,
+                      enabled: !userManager.loading,
                       validator: (name) {
                         if (name.isEmpty)
                           // ignore: curly_braces_in_flow_control_structures
@@ -51,7 +50,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     TextFormField(
                         decoration: const InputDecoration(hintText: 'E-mail'),
-                        enabled: !UserManager.loading,
+                        enabled: !userManager.loading,
                         keyboardType: TextInputType.emailAddress,
                         validator: (email) {
                           if (email.isEmpty)
@@ -66,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     TextFormField(
                       decoration: const InputDecoration(hintText: 'Senha'),
-                      enabled: !UserManager.loading,
+                      enabled: !userManager.loading,
                       obscureText: true,
                       validator: (pass) {
                         if (pass.isEmpty)
@@ -83,7 +82,7 @@ class SignUpScreen extends StatelessWidget {
                     TextFormField(
                       decoration:
                           const InputDecoration(hintText: 'Repitir Senha'),
-                      enabled: !UserManager.loading,
+                      enabled: !userManager.loading,
                       obscureText: true,
                       validator: (pass) {
                         if (pass.isEmpty)
@@ -104,7 +103,7 @@ class SignUpScreen extends StatelessWidget {
                           disabledColor:
                               Theme.of(context).primaryColor.withAlpha(100),
                           textColor: Colors.white,
-                          onPressed: UserManager.loading
+                          onPressed: userManager.loading
                               ? null
                               : () {
                                   if (formKey.currentState.validate()) {
@@ -119,7 +118,7 @@ class SignUpScreen extends StatelessWidget {
                                       return;
                                     }
 
-                                    UserManager.signUp(
+                                    userManager.signUp(
                                       user: user,
                                       onSuccess: () {
                                         Navigator.of(context).pop();
@@ -136,7 +135,7 @@ class SignUpScreen extends StatelessWidget {
                                     );
                                   }
                                 },
-                          child: UserManager.loading
+                          child: userManager.loading
                               ? //! Esse UserManager começa com "u" minusculo no tutorial
                               const CircularProgressIndicator(
                                   //TODO A animação de loadin fica aqui

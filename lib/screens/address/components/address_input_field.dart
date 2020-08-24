@@ -12,11 +12,12 @@ class AddressInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
+    final cartManager = context.watch<CartManager>();
 
     String emptyValidator(String text) =>
         text.isEmpty ? 'Campo obrigatório' : null;
 
-    if (address.zipCode != null)
+    if (address.zipCode != null && cartManager.deliveryPrice == null)
       // ignore: curly_braces_in_flow_control_structures
       return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -127,15 +128,33 @@ class AddressInputField extends StatelessWidget {
             color: primaryColor,
             disabledColor: primaryColor.withAlpha(100),
             textColor: Colors.white,
-            onPressed: () {
+            onPressed: () async {
               if (Form.of(context).validate()) {
                 Form.of(context).save();
-                context.read<CartManager>().setAddress(address);
+                try {
+                  await context.read<CartManager>().setAddress(address);
+                } catch (e) {
+                  Scaffold.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('$e'),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
+                }
               }
             },
             child: const Text('Calcular Frete'),
           ),
         ],
+      );
+    else if (address.zipCode != null)
+      // ignore: curly_braces_in_flow_control_structures
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 16),
+        child: Text(
+          '${address.street}, ${address.number}\n${address.district}\n'
+          '${address.city} - ${address.state}',
+        ),
       );
     else
       // ignore: curly_braces_in_flow_control_structures
