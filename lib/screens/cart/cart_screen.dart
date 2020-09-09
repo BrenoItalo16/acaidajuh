@@ -21,7 +21,7 @@ class CartScreen extends StatelessWidget {
           }
 
           if (cartManager.items.isEmpty) {
-            return EmptyCard(
+            return const EmptyCard(
               iconData: Icons.remove_shopping_cart,
               title: 'Nenhum produto no carrinho!',
             );

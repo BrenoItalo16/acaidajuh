@@ -27,8 +27,10 @@ class AddressCard extends StatelessWidget {
                       fontSize: 16,
                     ),
                   ),
-                  CepInputField(address),
-                  AddressInputField(address),
+                  CepInputField(
+                      address), //! Esse texto é exatamente igual ao de baixo
+                  AddressInputField(
+                      address), //! então um dos dois está errado (Eu acho)
                   if (address.zipCode != null &&
                       cartManager.deliveryPrice != null)
                     Padding(

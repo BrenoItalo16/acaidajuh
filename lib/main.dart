@@ -5,6 +5,7 @@ import 'package:acaidajuh/models/product_manager.dart';
 import 'package:acaidajuh/models/user_manager.dart';
 import 'package:acaidajuh/screens/address/address_screen.dart';
 import 'package:acaidajuh/screens/cart/cart_screen.dart';
+import 'package:acaidajuh/screens/checkout/checkout_screen.dart';
 import 'package:acaidajuh/screens/edit_product.dart/edit_product_screen.dart';
 import 'package:acaidajuh/screens/login/login_screen.dart';
 import 'package:acaidajuh/screens/product/product_screen.dart';
@@ -88,6 +89,10 @@ class MyApp extends StatelessWidget {
             case '/address':
               return MaterialPageRoute(
                 builder: (_) => AddressScreen(),
+              );
+            case '/checkout':
+              return MaterialPageRoute(
+                builder: (_) => CheckoutScreen(),
               );
             case '/select_product':
               return MaterialPageRoute(
