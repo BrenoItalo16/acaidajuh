@@ -1,3 +1,5 @@
+//import 'package:acaidajuh/models/cart_product.dart';
+import 'package:acaidajuh/models/product.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:acaidajuh/models/cart_manager.dart';
@@ -12,8 +14,13 @@ class CheckoutManager extends ChangeNotifier {
     this.cartManager = cartManager;
   }
 
-  void checkout() {
-    _decrementStock();
+  Future<void> checkout({Function onStockFail}) async {
+    try {
+      await _decrementStock();
+    } catch (e) {
+      onStockFail();
+      debugPrint(e.toString());
+    }
 
     // ignore: avoid_print
     _getOrderId().then((value) => print(value));
@@ -36,9 +43,47 @@ class CheckoutManager extends ChangeNotifier {
     }
   }
 
-  void _decrementStock() {
+  Future<void> _decrementStock() {
     // 1. Ler todos os estoques 3xM
     // 2. Decremento localmente os estoques 2xM
     // 3. Salvar os estoques no firebase 2xM
+
+    return firestore.runTransaction((tx) async {
+      final List<Product> productsToUpdate = [];
+      final List<Product> productsWithoutStock = [];
+
+      for (final cartProduct in cartManager.items) {
+        Product product;
+
+        if (productsToUpdate.any((p) => p.id == cartProduct.productId)) {
+          product =
+              productsToUpdate.firstWhere((p) => p.id == cartProduct.productId);
+        } else {
+          final doc = await tx
+              .get(firestore.document('products/${cartProduct.productId}'));
+          product = Product.fromDocument(doc);
+        }
+
+        cartProduct.product = product;
+
+        final size = product.findSize(cartProduct.size);
+        if (size.stock - cartProduct.quantity < 0) {
+          productsWithoutStock.add(product);
+        } else {
+          size.stock -= cartProduct.quantity;
+          productsToUpdate.add(product);
+        }
+      }
+
+      if (productsWithoutStock.isNotEmpty) {
+        return Future.error(
+            '${productsWithoutStock.length} produtos sem estoque');
+      }
+
+      for (final product in productsToUpdate) {
+        tx.update(firestore.document('products/${product.id}'),
+            {'sizes': product.exportSizeList()});
+      }
+    });
   }
 }

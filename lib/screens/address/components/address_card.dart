@@ -31,15 +31,15 @@ class AddressCard extends StatelessWidget {
                       address), //! Esse texto é exatamente igual ao de baixo
                   AddressInputField(
                       address), //! então um dos dois está errado (Eu acho)
-                  if (address.zipCode != null &&
-                      cartManager.deliveryPrice != null)
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 16),
-                      child: Text(
-                        '${address.street}, ${address.number}\n${address.district}\n'
-                        '${address.city} - ${address.state}',
-                      ),
-                    )
+                  // if (address.zipCode != null &&
+                  //     cartManager.deliveryPrice != null)
+                  //   Padding(
+                  //     padding: const EdgeInsets.only(bottom: 16),
+                  //     child: Text(
+                  //       '${address.street}, ${address.number}\n${address.district}\n'
+                  //       '${address.city} - ${address.state}',
+                  //     ),
+                  //   )
                 ],
               ),
             );
