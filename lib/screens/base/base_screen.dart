@@ -1,11 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:acaidajuh/common/custom_drawer/custom_drawer.dart';
 import 'package:acaidajuh/models/page_manager.dart';
 import 'package:acaidajuh/models/user_manager.dart';
 import 'package:acaidajuh/screens/admin_users/admin_users_screen.dart';
 import 'package:acaidajuh/screens/home/home_screen.dart';
-//import 'package:acaidajuh/screens/login/login_screen.dart';
+import 'package:acaidajuh/screens/orders/orders_screen.dart';
 import 'package:acaidajuh/screens/products/products_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -27,13 +27,7 @@ class _BaseScreenState extends State<BaseScreen> {
             physics: const NeverScrollableScrollPhysics(),
             children: <Widget>[
               HomeScreen(),
-              Scaffold(
-                drawer: CustomDrawer(),
-                appBar: AppBar(
-                  title:
-                      const Text('Meus Pedidos'), //Acesso à tela Meus Pedidos
-                ),
-              ),
+              OrdersScreen(),
               ProductsScreen(), //Acesso à tela Produtos
               Scaffold(
                 drawer: CustomDrawer(),
@@ -43,7 +37,7 @@ class _BaseScreenState extends State<BaseScreen> {
               ),
               if (userManager.adminEnabled) ...[
                 //Acesso à tela Produtos
-                AdminUsersScree(),
+                AdminUsersScreen(),
                 Scaffold(
                   drawer: CustomDrawer(),
                   appBar: AppBar(
