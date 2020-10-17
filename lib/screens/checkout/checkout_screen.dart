@@ -1,6 +1,7 @@
 import 'package:acaidajuh/common/custom_drawer/price_card.dart';
 import 'package:acaidajuh/models/cart_manager.dart';
 import 'package:acaidajuh/models/checkout_manager.dart';
+import 'package:acaidajuh/models/page_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -26,11 +27,11 @@ class CheckoutScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircularProgressIndicator(
+                    const CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation(Colors.white),
                     ),
                     const SizedBox(height: 16),
-                    Text('Processando seu pagamento...')
+                    const Text('Processando seu pagamento...')
                   ],
                 ),
               );
@@ -43,9 +44,13 @@ class CheckoutScreen extends StatelessWidget {
                     checkoutManager.checkout(onStockFail: (e) {
                       Navigator.of(context)
                           .popUntil((route) => route.settings.name == '/cart');
-                    }, onSuccess: () {
+                    }, onSuccess: (order) {
                       Navigator.of(context)
                           .popUntil((route) => route.settings.name == '/base');
+                      Navigator.of(context).pushNamed(
+                        '/confirmation',
+                        arguments: order,
+                      );
                     });
                   },
                 )
