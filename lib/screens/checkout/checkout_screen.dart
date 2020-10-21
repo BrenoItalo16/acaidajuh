@@ -1,7 +1,6 @@
-import 'package:acaidajuh/common/custom_drawer/price_card.dart';
+import 'package:acaidajuh/common/price_card.dart';
 import 'package:acaidajuh/models/cart_manager.dart';
 import 'package:acaidajuh/models/checkout_manager.dart';
-import 'package:acaidajuh/models/page_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

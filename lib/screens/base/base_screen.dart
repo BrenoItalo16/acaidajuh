@@ -1,3 +1,4 @@
+import 'package:acaidajuh/screens/admin_orders/admin_orders_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:acaidajuh/common/custom_drawer/custom_drawer.dart';
 import 'package:acaidajuh/models/page_manager.dart';
@@ -36,14 +37,8 @@ class _BaseScreenState extends State<BaseScreen> {
                 ),
               ),
               if (userManager.adminEnabled) ...[
-                //Acesso à tela Produtos
                 AdminUsersScreen(),
-                Scaffold(
-                  drawer: CustomDrawer(),
-                  appBar: AppBar(
-                    title: const Text('Pedidos'),
-                  ),
-                ), //Acesso à tela Lojas
+                AdminOrdersScreen(), //Acesso à tela Lojas
               ], //Acesso à tela Produtos
             ],
           );

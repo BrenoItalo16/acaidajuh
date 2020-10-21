@@ -1,10 +1,10 @@
-import 'package:acaidajuh/common/custom_drawer/login_card.dart';
-import 'package:acaidajuh/common/custom_drawer/price_card.dart';
+import 'package:acaidajuh/common/login_card.dart';
+import 'package:acaidajuh/common/price_card.dart';
 import 'package:acaidajuh/common/empty_card.dart';
 import 'package:acaidajuh/models/cart_manager.dart';
+import 'package:acaidajuh/screens/cart/components/cart_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'components/cart_tile.dart';
 
 class CartScreen extends StatelessWidget {
   @override

@@ -1,9 +1,9 @@
 import 'package:acaidajuh/common/custom_drawer/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:acaidajuh/common/empty_card.dart';
-import 'package:acaidajuh/common/custom_drawer/login_card.dart';
+import 'package:acaidajuh/common/login_card.dart';
 import 'package:acaidajuh/models/orders_manager.dart';
-import 'package:acaidajuh/screens/orders/components/order_tile.dart';
+import 'package:acaidajuh/common/order/order_tile.dart';
 import 'package:provider/provider.dart';
 
 class OrdersScreen extends StatelessWidget {

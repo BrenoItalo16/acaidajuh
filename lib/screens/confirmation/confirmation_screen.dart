@@ -1,5 +1,5 @@
 import 'package:acaidajuh/models/order.dart';
-import 'package:acaidajuh/screens/cart/components/order_product_tile.dart';
+import 'package:acaidajuh/common/order/order_product_tile.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmationScreen extends StatelessWidget {
