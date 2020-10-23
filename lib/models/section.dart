@@ -11,7 +11,6 @@ class Section extends ChangeNotifier {
     items = items ?? [];
     originalItems = List.from(items);
   }
-
   Section.fromDocument(DocumentSnapshot document) {
     id = document.documentID;
     name = document.data['name'] as String;
@@ -20,19 +19,15 @@ class Section extends ChangeNotifier {
         .map((i) => SectionItem.fromMap(i as Map<String, dynamic>))
         .toList();
   }
-
   final Firestore firestore = Firestore.instance;
   final FirebaseStorage storage = FirebaseStorage.instance;
-
   DocumentReference get firestoreRef => firestore.document('home/$id');
   StorageReference get storageRef => storage.ref().child('home/$id');
-
   String id;
   String name;
   String type;
   List<SectionItem> items;
   List<SectionItem> originalItems;
-
   String _error;
   String get error => _error;
   set error(String value) {
@@ -56,14 +51,12 @@ class Section extends ChangeNotifier {
       'type': type,
       'pos': pos,
     };
-
     if (id == null) {
       final doc = await firestore.collection('home').add(data);
       id = doc.documentID;
     } else {
       await firestoreRef.updateData(data);
     }
-
     for (final item in items) {
       if (item.image is File) {
         final StorageUploadTask task =
@@ -75,17 +68,16 @@ class Section extends ChangeNotifier {
     }
 
     for (final original in originalItems) {
-      if (!items.contains(original)) {
+      if (!items.contains(original) &&
+          (original.image as String).contains('firebase')) {
         try {
-          final ref = await storage.getReferenceFromUrl(
-            original.image as String,
-          );
+          final ref =
+              await storage.getReferenceFromUrl(original.image as String);
           await ref.delete();
           // ignore: empty_catches
         } catch (e) {}
       }
     }
-
     final Map<String, dynamic> itemsData = {
       'items': items.map((e) => e.toMap()).toList()
     };
@@ -95,13 +87,13 @@ class Section extends ChangeNotifier {
   Future<void> delete() async {
     await firestoreRef.delete();
     for (final item in items) {
-      try {
-        final ref = await storage.getReferenceFromUrl(
-          item.image as String,
-        );
-        await ref.delete();
-        // ignore: empty_catches
-      } catch (e) {}
+      if ((item.image as String).contains('firebase')) {
+        try {
+          final ref = await storage.getReferenceFromUrl(item.image as String);
+          await ref.delete();
+          // ignore: empty_catches
+        } catch (e) {}
+      }
     }
   }
 
@@ -127,6 +119,6 @@ class Section extends ChangeNotifier {
 
   @override
   String toString() {
-    return 'Section{name: $name, type: $type, items:  $items}';
+    return 'Section{name: $name, type: $type, items: $items}';
   }
 }

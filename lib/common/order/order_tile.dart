@@ -1,3 +1,5 @@
+import 'package:acaidajuh/common/order/cancel_order_dialog.dart';
+import 'package:acaidajuh/common/order/export_address_dialog.dart';
 import 'package:acaidajuh/models/order.dart';
 import 'package:acaidajuh/common/order/order_product_tile.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +64,12 @@ class OrderTile extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   FlatButton(
-                    onPressed: order.cancel,
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (_) => CancelOrderDialog(order),
+                      );
+                    },
                     textColor: Colors.red,
                     child: const Text('Cancelar'),
                   ),
@@ -75,7 +82,12 @@ class OrderTile extends StatelessWidget {
                     child: const Text('Avançar'),
                   ),
                   FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (_) => ExportAddressDialog(order.address),
+                      );
+                    },
                     textColor: primaryColor,
                     child: const Text('Endereço'),
                   ),

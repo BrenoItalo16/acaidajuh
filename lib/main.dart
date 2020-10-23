@@ -22,10 +22,6 @@ import 'models/cart_manager.dart';
 
 void main() {
   runApp(MyApp());
-
-  //CepAbertoService();
-  //     .getAddressFromCep('59508000')
-  //     .then((address) => print(address));
 }
 
 class MyApp extends StatelessWidget {
@@ -64,23 +60,21 @@ class MyApp extends StatelessWidget {
               adminUsersManager..updateUser(userManager),
         ),
         ChangeNotifierProxyProvider<UserManager, AdminOrdersManager>(
-            create: (_) => AdminOrdersManager(),
-            lazy: false,
-            update: (_, userManager, adminOrdersManager) => adminOrdersManager
-              ..updateAdmin(adminEnabled: userManager.adminEnabled))
+          create: (_) => AdminOrdersManager(),
+          lazy: false,
+          update: (_, userManager, adminOrdersManager) => adminOrdersManager
+            ..updateAdmin(adminEnabled: userManager.adminEnabled),
+        )
       ],
       child: MaterialApp(
         title: 'Açaí da Juh',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: const Color.fromARGB(
-              255, 128, 0, 128), //Cor principal 255, 170, 0, 255
-          scaffoldBackgroundColor: const Color.fromARGB(
-              255, 128, 0, 128), //Cor de fundo 255, 170, 0, 255
+          primaryColor: const Color.fromARGB(255, 110, 0, 110),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 110, 0, 110),
           appBarTheme: const AppBarTheme(elevation: 0),
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        initialRoute: '/base',
         onGenerateRoute: (settings) {
           switch (settings.name) {
             case '/login':
@@ -107,7 +101,7 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(
                   builder: (_) =>
                       ConfirmationScreen(settings.arguments as Order));
-            case '/base':
+            case '/':
             default:
               return MaterialPageRoute(
                   builder: (_) => BaseScreen(), settings: settings);

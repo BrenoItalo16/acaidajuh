@@ -7,6 +7,7 @@ import 'package:acaidajuh/screens/admin_users/admin_users_screen.dart';
 import 'package:acaidajuh/screens/home/home_screen.dart';
 import 'package:acaidajuh/screens/orders/orders_screen.dart';
 import 'package:acaidajuh/screens/products/products_screen.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -16,6 +17,15 @@ class BaseScreen extends StatefulWidget {
 
 class _BaseScreenState extends State<BaseScreen> {
   final PageController pageController = PageController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,18 +38,18 @@ class _BaseScreenState extends State<BaseScreen> {
             physics: const NeverScrollableScrollPhysics(),
             children: <Widget>[
               HomeScreen(),
+              ProductsScreen(),
               OrdersScreen(),
-              ProductsScreen(), //Acesso à tela Produtos
               Scaffold(
                 drawer: CustomDrawer(),
                 appBar: AppBar(
-                  title: const Text('Lojas'), //Acesso à tela Lojas
+                  title: const Text('Lojas'),
                 ),
               ),
               if (userManager.adminEnabled) ...[
                 AdminUsersScreen(),
-                AdminOrdersScreen(), //Acesso à tela Lojas
-              ], //Acesso à tela Produtos
+                AdminOrdersScreen(),
+              ]
             ],
           );
         },

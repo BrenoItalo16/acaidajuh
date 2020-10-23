@@ -172,12 +172,12 @@
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -312,6 +312,10 @@
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\6f5a09b4953ee13b34e15b87364445ea\\core-1.2.0\\res\\drawable\\notification_icon_background.xml"
     },
     {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
@@ -424,6 +428,10 @@
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple.xml.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\layout\\abc_screen_simple.xml"
     },
@@ -482,6 +490,10 @@
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_normal.xml.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\3e048612d3799077421484434852ba6c\\play-services-base-17.2.1\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable_ucrop_vector_loader_animated.xml.flat",
@@ -690,6 +702,10 @@
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable_ucrop_ic_next.xml.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\3a7cc257d4834426bdf1db2eea34b460\\ucrop-2.2.5\\res\\drawable\\ucrop_ic_next.xml"
+    },
+    {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -924,6 +940,10 @@
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\3e048612d3799077421484434852ba6c\\play-services-base-17.2.1\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_googleg_standard_color_18.png.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\3e048612d3799077421484434852ba6c\\play-services-base-17.2.1\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
     },
@@ -1100,6 +1120,10 @@
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\layout-v26\\abc_screen_toolbar.xml"
     },
     {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ucrop_ic_done.png.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\3a7cc257d4834426bdf1db2eea34b460\\ucrop-2.2.5\\res\\drawable-xxhdpi-v4\\ucrop_ic_done.png"
     },
@@ -1170,6 +1194,10 @@
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_normal.xml.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\3e048612d3799077421484434852ba6c\\play-services-base-17.2.1\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -1664,6 +1692,10 @@
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_lines_media.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_bar.xml.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\layout\\abc_action_mode_bar.xml"
     },
@@ -1822,6 +1854,10 @@
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\f28ec38a8e96c2e45fef235e085659cc\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
+        "source": "C:\\Users\\srbre\\.gradle\\caches\\transforms-2\\files-2.1\\d5891aeebd64f384d1362c075a7101c7\\media-1.0.0\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "C:\\src\\apps\\acaidajuh\\build\\app\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",

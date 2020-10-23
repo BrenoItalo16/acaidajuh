@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 
 class CheckoutScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProxyProvider<CartManager, CheckoutManager>(
@@ -25,12 +26,20 @@ class CheckoutScreen extends StatelessWidget {
               return Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const CircularProgressIndicator(
+                  children: const <Widget>[
+                    CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation(Colors.white),
                     ),
-                    const SizedBox(height: 16),
-                    const Text('Processando seu pagamento...')
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Text(
+                      'Processando seu pagamento...',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w800,
+                          fontSize: 16),
+                    )
                   ],
                 ),
               );
@@ -45,11 +54,9 @@ class CheckoutScreen extends StatelessWidget {
                           .popUntil((route) => route.settings.name == '/cart');
                     }, onSuccess: (order) {
                       Navigator.of(context)
-                          .popUntil((route) => route.settings.name == '/base');
-                      Navigator.of(context).pushNamed(
-                        '/confirmation',
-                        arguments: order,
-                      );
+                          .popUntil((route) => route.settings.name == '/');
+                      Navigator.of(context)
+                          .pushNamed('/confirmation', arguments: order);
                     });
                   },
                 )

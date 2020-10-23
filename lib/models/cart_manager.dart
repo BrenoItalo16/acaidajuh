@@ -180,7 +180,8 @@ class CartManager extends ChangeNotifier {
       return false;
     }
 
-    deliveryPrice = base + dis * km;
+    deliveryPrice = (base + dis * km) * 0;
+    //para calcular o frete excluir o  "vezes zero" e os parenteses
     return true;
   }
 }
