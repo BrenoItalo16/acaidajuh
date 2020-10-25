@@ -1,5 +1,6 @@
 import 'package:acaidajuh/models/user.dart';
 import 'package:acaidajuh/models/user_manager.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_signin_button/button_view.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:provider/provider.dart';
@@ -35,11 +36,21 @@ class LoginScreen extends StatelessWidget {
       ),
       body: Center(
         child: Card(
+          color: Colors.white,
           margin: const EdgeInsets.symmetric(horizontal: 16),
           child: Form(
               key: formKey,
               child: Consumer<UserManager>(
                 builder: (_, userManager, child) {
+                  if (userManager.loadingFace) {
+                    return Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: CircularProgressIndicator(
+                        valueColor: AlwaysStoppedAnimation(
+                            Theme.of(context).primaryColor),
+                      ),
+                    );
+                  }
                   return ListView(
                     padding: const EdgeInsets.all(16),
                     shrinkWrap: true,
@@ -115,7 +126,19 @@ class LoginScreen extends StatelessWidget {
                         Buttons.Facebook,
                         text: 'Entrar com Facebook',
                         onPressed: () {
-                          userManager.facebookLogin();
+                          userManager.facebookLogin(
+                            onFail: (e) {
+                              scaffoldKey.currentState.showSnackBar(
+                                SnackBar(
+                                  content: Text('Falha ao entrar: $e'),
+                                  backgroundColor: Colors.red,
+                                ),
+                              );
+                            }, //onFail
+                            onSuccess: () {
+                              Navigator.of(context).pop();
+                            }, //onSuccess
+                          );
                         },
                       )
                     ],
