@@ -48,6 +48,7 @@ dependencies:
   gallery_saver: ^2.0.1
   flutter_signin_button: ^1.1.0
   flutter_facebook_login: ^3.0.0
+  footer: ^0.0.3
   
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,8 @@ flutter:
     - android/assets/images/logo.png
     - android/assets/images/devbitt.png
     - android/assets/flare/loading_adj.flr
+    - android/assets/flare/loadingADJ.flr
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

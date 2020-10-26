@@ -47,7 +47,8 @@ class LoginScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(16.0),
                       child: CircularProgressIndicator(
                         valueColor: AlwaysStoppedAnimation(
-                            Theme.of(context).primaryColor),
+                          Theme.of(context).primaryColor,
+                        ),
                       ),
                     );
                   }
@@ -112,6 +113,8 @@ class LoginScreen extends StatelessWidget {
                         disabledColor:
                             Theme.of(context).primaryColor.withAlpha(100),
                         textColor: Colors.white,
+
+                        //todo: Inserir a animação aqui
                         child: userManager.loading
                             ? const CircularProgressIndicator(
                                 valueColor:
