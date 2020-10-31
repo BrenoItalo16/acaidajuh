@@ -5,6 +5,7 @@ import 'package:acaidajuh/models/order.dart';
 import 'package:acaidajuh/models/orders_manager.dart';
 import 'package:acaidajuh/models/product.dart';
 import 'package:acaidajuh/models/product_manager.dart';
+import 'package:acaidajuh/models/stores_manager.dart';
 import 'package:acaidajuh/models/user_manager.dart';
 import 'package:acaidajuh/screens/address/address_screen.dart';
 import 'package:acaidajuh/screens/cart/cart_screen.dart';
@@ -40,6 +41,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => HomeManager(),
           lazy: false,
+        ),
+        ChangeNotifierProvider(
+          create: (_) => StoresManager(),
         ),
         ChangeNotifierProxyProvider<UserManager, CartManager>(
           create: (_) => CartManager(),
