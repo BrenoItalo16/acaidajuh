@@ -69,7 +69,7 @@ class CustomDrawer extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  'V.0.1',
+                  'V.0.1 - Desenvolvido por:',
                   style: TextStyle(
                     color: Colors.black45,
                   ),

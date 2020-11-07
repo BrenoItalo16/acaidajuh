@@ -27,7 +27,9 @@ public final class GeneratedPluginRegistrant {
     flutterEngine.getPlugins().add(new vn.hunghd.flutter.plugins.imagecropper.ImageCropperPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.imagepicker.ImagePickerPlugin());
     flutterEngine.getPlugins().add(new com.baseflow.location_permissions.LocationPermissionsPlugin());
+      com.alexmiller.map_launcher.MapLauncherPlugin.registerWith(shimPluginRegistry.registrarFor("com.alexmiller.map_launcher.MapLauncherPlugin"));
     flutterEngine.getPlugins().add(new io.flutter.plugins.pathprovider.PathProviderPlugin());
+    flutterEngine.getPlugins().add(new io.flutter.plugins.urllauncher.UrlLauncherPlugin());
       com.benjaminabel.vibration.VibrationPlugin.registerWith(shimPluginRegistry.registrarFor("com.benjaminabel.vibration.VibrationPlugin"));
   }
 }

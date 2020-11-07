@@ -43,5 +43,12 @@
 	<false/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Acessar camera para adicionar imagem</string>
+
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>comgooglemaps</string>
+		<string>iosamap</string>
+		<string>waze</string>
+	</array>
 </dict>
 </plist>
