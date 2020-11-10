@@ -174,7 +174,7 @@ class CartManager extends ChangeNotifier {
 
     dis /= 1000.0;
 
-    debugPrint('Distance $dis');
+    //debugPrint('Distance $dis');
 
     if (dis > maxkm) {
       return false;

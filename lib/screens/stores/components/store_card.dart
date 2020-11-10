@@ -10,8 +10,8 @@ class StoreCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
-    Color colorForStatus(StoreStatus status){
-      switch(status){
+    Color colorForStatus(StoreStatus status) {
+      switch (status) {
         case StoreStatus.closed:
           return Colors.red;
         case StoreStatus.open:
@@ -22,24 +22,23 @@ class StoreCard extends StatelessWidget {
           return Colors.green;
       }
     }
-    void showError(){
-      Scaffold.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Esta função não está disponível neste dispositivo'),
-            backgroundColor: Colors.red,
-          )
-      );
+
+    void showError() {
+      Scaffold.of(context).showSnackBar(const SnackBar(
+        content: Text('Esta função não está disponível neste dispositivo'),
+        backgroundColor: Colors.red,
+      ));
     }
 
     Future<void> openPhone() async {
-      if(await canLaunch('tel:${store.cleanPhone}')){
+      if (await canLaunch('tel:${store.cleanPhone}')) {
         launch('tel:${store.cleanPhone}');
       } else {
         showError();
       }
     }
 
-    Future<void > openMap() async {
+    Future<void> openMap() async {
       try {
         final availableMaps = await MapLauncher.installedMaps;
 
@@ -50,11 +49,12 @@ class StoreCard extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    for(final map in availableMaps)
+                    for (final map in availableMaps)
                       ListTile(
-                        onTap: (){
+                        onTap: () {
                           map.showMarker(
-                            coords: Coords(store.address.lat, store.address.long),
+                            coords:
+                                Coords(store.address.lat, store.address.long),
                             title: store.name,
                             description: store.addressText,
                           );
@@ -70,9 +70,8 @@ class StoreCard extends StatelessWidget {
                   ],
                 ),
               );
-            }
-        );
-      } catch (e){
+            });
+      } catch (e) {
         showError();
       }
     }
@@ -94,12 +93,10 @@ class StoreCard extends StatelessWidget {
                 Align(
                   alignment: Alignment.topRight,
                   child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: const BorderRadius.only(
-                        bottomLeft: Radius.circular(8)
-                      )
-                    ),
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius:
+                            BorderRadius.only(bottomLeft: Radius.circular(8))),
                     padding: const EdgeInsets.all(8),
                     child: Text(
                       store.statusText,
@@ -126,7 +123,7 @@ class StoreCard extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         store.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w800,
                           fontSize: 17,
                         ),
