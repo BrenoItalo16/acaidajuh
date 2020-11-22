@@ -240,8 +240,9 @@ com/google/protobuf/ExperimentalApi.class
 com/yalantis/ucrop/UCropActivity$GestureTypes.class
 com/yalantis/ucrop/UCropFragment$GestureTypes.class
 com/yalantis/ucrop/view/OverlayView$FreestyleMode.class
+io/flutter/FlutterInjector.class
 io/flutter/app/FlutterApplication.class
-io/flutter/view/FlutterMain.class
+io/flutter/embedding/engine/loader/FlutterLoader.class
 io/grpc/CallOptions.class
 io/grpc/EquivalentAddressGroup$Attr.class
 io/grpc/ExperimentalApi.class
