@@ -26,7 +26,7 @@ import 'models/cart_manager.dart';
 void main() async {
   runApp(MyApp());
   final response = await CloudFunctions.instance
-      .getHttpsCallable(functionName: 'helloWorld')
+      .getHttpsCallable(functionName: 'getUserData')
       .call();
   // ignore: avoid_print
   print(response.data);
