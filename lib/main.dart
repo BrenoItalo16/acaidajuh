@@ -16,7 +16,6 @@ import 'package:acaidajuh/screens/login/login_screen.dart';
 import 'package:acaidajuh/screens/product/product_screen.dart';
 import 'package:acaidajuh/screens/select_product/select_product_screen.dart';
 import 'package:acaidajuh/screens/signup/signup_screen.dart';
-import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:acaidajuh/screens/base/base_screen.dart';
 import 'package:provider/provider.dart';
@@ -25,11 +24,6 @@ import 'models/cart_manager.dart';
 // ignore: avoid_void_async
 void main() async {
   runApp(MyApp());
-  final response = await CloudFunctions.instance
-      .getHttpsCallable(functionName: 'getUserData')
-      .call();
-  // ignore: avoid_print
-  print(response.data);
 }
 
 class MyApp extends StatelessWidget {
