@@ -57,6 +57,7 @@ dependencies:
   keyboard_actions: ^3.2.1+1
   firebase_messaging: ^6.0.16
   cloud_functions: ^0.5.0
+  flushbar: ^1.10.4
 
   
 dev_dependencies:

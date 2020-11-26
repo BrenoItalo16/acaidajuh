@@ -15,7 +15,7 @@ class Store {
       final timesString = value as String;
       if (timesString != null && timesString.isNotEmpty) {
         // ignore: unnecessary_raw_strings
-        final splitted = timesString.split(RegExp(r"[:-]"));
+        final splitted = timesString.split(RegExp("[:-]"));
         return MapEntry(key, {
           "from": TimeOfDay(
               hour: int.parse(splitted[0]), minute: int.parse(splitted[1])),
