@@ -42,9 +42,9 @@ class _BaseScreenState extends State<BaseScreen> {
     }
 
     fcm.configure(onLaunch: (Map<String, dynamic> message) async {
-      print('onLaunch $message');
+      //print('onLaunch $message');
     }, onResume: (Map<String, dynamic> message) async {
-      print('onResume $message');
+      //print('onResume $message');
     }, onMessage: (Map<String, dynamic> message) async {
       showNotification(
         message['notification']['title'] as String,
